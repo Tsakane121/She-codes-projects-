@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dark-mode</title>
+    <style>
+      body {
+         
+        background: linear-gradient(
+          68.6deg,
+          rgb(95, 10, 135) 11.4%,
+          rgb(164, 80, 139) 60.2%
+        );
+      }
+    
+      body.dark-mode {
+        background-color: #121212;
+        
+      }
+      
+      h1 {
+        text-align: center;
+        
+      }
+      h2 {
+        text-align: center;
+      
+      }
+  
+      img {
+        max-width: 70%;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid purple;
+        background: white;
+        border-radius: 6px;
+        padding: 5px 10px;
+        transition: all 150ms ease-in-out;
+      }
+      button:hover {
+        background: black;
+        color: white;
+        curser: pointer;
+      }
+      .container {
+        max-width: 600px;
+        background: linear-gradient(
+          109.6deg,
+          rgb(255, 221, 225) 11.2%,
+          rgb(255, 255, 255) 92.2%,
+        )
+        padding: 30px;
+        border-radius: 10px;
+        margin: 20px auto;
+      }
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 18px;
+        color: black;
+      }
+      .theme-button {
+        font-size: 13px;
+        background: black;
+        color: white;
+        padding: 5 8px;
+      }
+      .theme-button :hover {
+        color: black;
+        background: white;
+      }
+
+      .container {
+        max-width: 600px;
+        background: linear-gradient(
+          109.6deg,
+          rgb(255, 221, 225) 11.2%,
+          rgb(255, 255, 255) 92.2%
+        );
+        padding: 30px;
+        border-radius: 10px;
+        margin: 20px auto;
+      }
+      a {
+        color: blue;
+      }
+      .ozonepaint-intro-image {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+        background: black;
+      }
+      .ozonepaint-intro-image:hover {
+        filter: contrast(80%);
+        transform: scale(1.2);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+        transition: all 150ms ease-in-out;
+      }
+      .grid img:hover {
+        transform: scale(2);
+      }
+      p {
+        font-size: 18px;
+      
+      }
+      .dark {
+        background: black;
+        color: white;
+      }
+      .dark .container {
+        background: rgb(58, 50, 50);
+      }
+      .dark a {
+        color: orangered;
+      }
+      .dark footer{
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change theme</button>
+    
+    </script>
+    <div class="container">
+      <h1>ozone wall paint design</h1>
+      <h2>our paints inspires</h2>
+      <a href="https://en.wikipedia.org/wiki/Paint" target="_blank">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0565/4039/7655/articles/wall_painting_ideas_18.png?crop=center&height=480&v=1681800405&width=480"
+          alt=""
+          class="ozonepaint-intro-image"
+        />
+      </a>
+
+      <div class="grid">
+        <img
+          src="https://i.pinimg.com/originals/f9/fb/57/f9fb57d66635b98a286e471400a03055.jpg"
+          alt=""
+        />
+        <img
+          src="https://tse4.mm.bing.net/th?id=OIP.ERq_NWTchnoGJsozsYGqRAHaFj&pid=Api&P=0&h=220"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/originals/5d/a4/7d/5da47d0770dac723e429d691e313773e.jpg"
+          alt=""
+        />
+        <img
+          src="https://cdn.shopify.com/s/files/1/0565/4039/7655/files/wall_painting_ideas_14.png"
+          alt=""
+        />
+      </div>
+      <p>
+        Definition and Significance: Wall paint design refers to the artistic
+        application of paint on walls to create visually appealing patterns,
+        textures, and effects. It plays a crucial role in interior decoration,
+        serving as a focal point and setting the tone for the overall ambiance
+        of a space.Making the intire space to be attractive,beautiful and lively
+        to be around.
+        <br /><br />
+        👉
+        <a href="https://en.wikipedia.org/wiki/Paint">
+          <strong>Read on wikipedia</strong>
+        </a>
+      </p>
+      <button>Learn paints</button>
+    </div>
+    <footer>
+      Coded by 💞
+      <a
+        href="https://r.search.yahoo.com/_ylt=AwrFNx1zXFdn9AEAdx9XNyoA;_ylu=Y29sbwNiZjEEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1734988148/RO=10/RU=https%3a%2f%2fwww.wikihow.com%2fPaint-Designs-on-Walls/RK=2/RS=w.5NHepraa7GnI85KuMT5xBeRBw-/"
+        target="_blank"
+        >Tsakane Mabasa</a
+      >
+    </footer>
+
+    <script>
+
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        // body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    
+    </script>
+  </body>
+</html>

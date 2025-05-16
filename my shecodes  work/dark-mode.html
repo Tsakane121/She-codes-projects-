@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>dark mode</title>
+    <!--css-->
+    <style>
+      body {
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+      }
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+      button {
+        cursor: pointer;
+      }
+
+      @media (prefers-color-scheme: light) {
+        body {
+          background-color: white;
+        }
+        h1 {
+          color: black;
+        }
+      }
+
+      @media (prefers-color-scheme: dark) body {
+        background-color: #000;
+      }
+      h1 {
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>hello world</h1>
+    <h2>toggle dark/light mode</h2>
+    <p>click the button to toggle between dark and light mode for this page</p>
+    <button onclick="myfunction()">toggle dark mode</button>
+    <!-- javascript-->
+    <script>
+      function myfunction() {
+        let element = document.body;
+        element.classList.toggle("dark-mode");
+      }
+    </script>
+  </body>
+</html>
